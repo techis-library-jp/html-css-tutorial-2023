@@ -1,0 +1,20 @@
+/*************************
+* 変数の定義
+**************************/
+
+:root {
+  /* サイズ指定 */
+  --YC-HEADER-HIGHT: 56px;
+  --YC-SIDEBAR-WIDTH: 72px;
+
+  /* 色指定 */
+}
+
+/* スマホサイズの場合 */
+@media screen and (max-width: 480px) {
+  :root {
+    /* サイズ指定 */
+    --YC-HEADER-HIGHT: 48px;
+    --YC-SIDEBAR-WIDTH: 0px;
+  }
+}

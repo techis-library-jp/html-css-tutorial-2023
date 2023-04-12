@@ -1,0 +1,131 @@
+/*************************
+* ホームページ
+**************************/
+
+main.home {
+  margin-top: var(--YC-HEADER-HIGHT);
+  margin-left: var(--YC-SIDEBAR-WIDTH);
+  padding: 5px 25px;
+}
+
+/* スマホサイズの場合 */
+@media screen and (max-width: 480px) {
+  main.home {
+    padding: 5px 0 0 0;
+  }
+}
+
+/* *********** */
+/*　タグメニュー */
+/* *********** */
+
+main.home ul.tag-menu {
+  display: flex;
+  gap: 15px;
+  padding: 10px 0 25px 0;
+  width: 100%;
+  align-items: center;
+
+  /* 中身のコンテンツが横幅を超えた場合は、スクロールバーを自動で表示 */
+  /* xは、x軸の意味 */
+  overflow-x: auto;
+
+  /* 自動改行を禁止 */
+  white-space: nowrap;
+}
+
+main.home ul.tag-menu li {
+  list-style: none;
+}
+
+main.home ul.tag-menu li a {
+  text-decoration: none;
+  color: black;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+main.home ul.tag-menu li a:hover {
+  background-color: gainsboro;
+}
+
+main.home ul.tag-menu li a.active {
+  background-color: black;
+  color: white;
+}
+
+/* スマホサイズの場合 */
+@media screen and (max-width: 480px) {
+  main.home ul.tag-menu {
+    padding: 10px;
+  }
+}
+
+/* *********** */
+/* 動画一覧 grid */
+/* *********** */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding: 0 15px;
+}
+
+.video-grid .video {
+  cursor: pointer;
+}
+
+.video-grid .video img.thumbnail {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.video-grid .video .video-info {
+  display: flex;
+  gap: 10px;
+  padding: 10px 5px 10px 5px;
+}
+
+.video-grid .video .video-info img.profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 36px;
+}
+
+.video-grid .video .video-info .video-info-title {
+  font-weight: bold;
+  padding-bottom: 8px;
+  line-height: 23px;
+  height: 40px;
+
+  /* 文章が長い場合は、３点ドットを表示するための設定 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 2行目まで表示 */
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.video-grid .video .video-info .video-info-channel,
+.video-grid .video .video-info .video-info-data {
+  font-size: 15px;
+  color: gray;
+}
+
+/* スマホサイズの場合 */
+@media screen and (max-width: 480px) {
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .video-grid .video img.thumbnail {
+    border-radius: 0;
+  }
+}

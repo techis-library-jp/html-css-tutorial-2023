@@ -1,0 +1,157 @@
+/*************************
+* ヘッダー
+**************************/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--YC-HEADER-HIGHT);
+  background-color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+/* スマホサイズの場合 */
+@media screen and (max-width: 480px) {
+  header {
+    border-bottom: 1px solid gainsboro;
+    box-shadow: 0px 3px 3px gainsboro;
+  }
+}
+
+header .icons-right {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 30px;
+  width: 200px;
+  padding-right: 10px;
+}
+
+header .icons-right .profile-icon {
+  cursor: pointer;
+}
+
+header .icons-left {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 30px;
+  width: 200px;
+}
+
+header form {
+  width: 728px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header form input {
+  height: 35.5px;
+  border: 1px solid gainsboro;
+  border-right: 0;
+  flex: 1;
+
+  /* 左上 | 右上 | 右下 | 左下 */
+  border-radius: 40px 0 0 40px;
+
+  /* 縦余白 | 横余白 */
+  padding: 0 15px;
+
+  /* 内側 | 横軸 | 縦軸 | 色 */
+  box-shadow: inset 0 1px 2px #eee;
+}
+
+header form button.search {
+  /* 左上 | 右上 | 右下 | 左下 */
+  border-radius: 0 40px 40px 0;
+  border: 1px solid gainsboro;
+  background-color: whitesmoke;
+  height: 37.5px;
+  padding: 0 25px;
+}
+
+header form button.search:hover {
+  background-color: gainsboro;
+}
+
+header form button.search img {
+  width: 15px;
+}
+
+header form .mic-button {
+  margin-left: 10px;
+}
+
+/* *********** */
+/* Button設定 */
+/* *********** */
+
+header button {
+  position: relative;
+  cursor: pointer;
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 0;
+  text-align: center;
+  background: white;
+}
+
+header button:hover {
+  background: gainsboro;
+}
+
+header button:hover .tooltip {
+  /* マウスを近づけると表示（不透明度90%） */
+  opacity: 90%;
+}
+
+header button .tooltip {
+  position: absolute;
+  font-size: 12px;
+  top: 50px;
+  left: -10px;
+  /* デフォルトは非表示（透明） */
+  opacity: 0;
+  z-index: 1;
+  color: white;
+  /* 改行しない */
+  white-space: nowrap;
+  background-color: dimgray;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+/* ************************* */
+/* スマホ・パソコンの表示切り替え */
+/* ************************* */
+
+/* パソコンのみ非表示 */
+.pc-hide {
+  display: none;
+}
+
+/* スマホサイズの場合 */
+@media screen and (max-width: 480px) {
+  /* スマホのみ非表示 */
+  .sp-hide {
+    display: none;
+  }
+
+  /* パソコンのみ非表示 */
+  .pc-hide {
+    display: block;
+  }
+}

@@ -1,0 +1,51 @@
+/*************************
+* サイドバー
+**************************/
+
+aside {
+  position: fixed;
+  top: var(--YC-HEADER-HIGHT);
+  width: var(--YC-SIDEBAR-WIDTH);
+  bottom: 0;
+  background-color: white;
+}
+
+aside ul {
+  padding-left: 0;
+}
+
+aside ul li {
+  list-style: none;
+}
+
+aside ul li a {
+  display: block;
+  text-align: center;
+  padding: 17px 0;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+aside ul li a:hover {
+  background-color: whitesmoke;
+}
+
+aside ul li a .label {
+  padding-top: 2px;
+  color: black;
+  font-size: 11px;
+}
+
+aside ul li:hover {
+}
+
+aside ul li img {
+  width: 20px;
+}
+
+/* スマホサイズの場合 */
+@media screen and (max-width: 480px) {
+  aside {
+    display: none;
+  }
+}
